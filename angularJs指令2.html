@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body ng-app="myModule">
+		
+		<hello></hello>
+		<!--双向绑定-->
+		<input type="" name="" id="" value="你好" ng-model="data.txt" placeholder="请输入名字"/>
+		<!--{{}}取值表单式子-->
+		<div>{{data.txt}}</div>
+	</body>
+	<script src="../js/angular.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var myModule = angular.module('myModule',[]);
+		//directive
+		myModule.directive('hello',function(){
+			return {
+				restrict:'E',
+				template:'<div>Hi everyone!</div>',//此标签替换hello标签
+				replace:true
+			}
+		})
+	</script>
+</html>

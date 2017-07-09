@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>angular</title>
+</head>
+<body>
+    <!--angular 是一个js框架，他是一个以js编写的代码库-->
+    <!--angular 是通过指令扩展了html，且通过表达式绑定数据到html-->
+    <div ng-app="">
+        <p>名字：<input type="text" ng-model="name"></p>
+        <h2>hello {{name}}</h2>
+    </div>
+
+<!--
+    当网页记载完毕，angularJs 自动开启
+    na-app指令告诉angularJscript，<div>元素是angularjs 应用程序的 ‘所有者’。
+    ng-model指令吧输入域的值绑定到应用程序变量name
+    ng-bind指令把应用程序变量name绑定到某个段落的innerhtml
+
+    //如果移除ng-app指令，html将直接把表达式显示出来，不会计算表达式的结果
+-->
+
+<!--
+    什么事angularjs？
+    angularjs 使得开发现代的单一页面应用程序（SPAs：Single Page Application）变得更加容易。
+    1.angularjs 把应用程序数据绑定到html元素上
+    2.angularjs可以克隆和重复html元素
+    3.angularjs可以隐藏和现实html元素
+    4.angularjs可以在html元素‘背后’添加代码
+    5.angularjs支持输入验证
+-->
+</body>
+<script src="../js/angular.js"></script>
+</html>
